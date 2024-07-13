@@ -2,6 +2,29 @@
 <html>
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <title>Centered Carousel</title>
+    <style>
+      .hero {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+      }
+      .carousel .item {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+      }
+      .carousel .item img {
+          display: block;
+          margin: 0 auto;
+      }
+      .carousel .item h2 {
+          margin-top: 10px;
+      }
+  </style>
+
     <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
     <!-- Replace the content tag with appropriate information -->
     <meta name="description" content="DESCRIPTION META TAG" />
@@ -54,6 +77,9 @@
     <script src="static/js/bulma-carousel.min.js"></script>
     <script src="static/js/bulma-slider.min.js"></script>
     <script src="static/js/index.js"></script>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
   </head>
   <body>
     <section class="hero">
@@ -62,47 +88,48 @@
           <div class="columns is-centered">
             <div class="column has-text-centered">
               <h1 class="title is-1 publication-title">
-                Academic Project Page
+                SinLane: Siamese Visual Transformer following Pyramid Feature Integration for Lane Detection
               </h1>
               <div class="is-size-5 publication-authors">
                 <!-- Paper authors -->
                 <span class="author-block">
                   <a href="FIRST AUTHOR PERSONAL LINK" target="_blank"
                     >Zinan Lv</a
-                  ><sup>*</sup>,</span
+                  ><sup>1,2</sup>,</span
                 >
                 <span class="author-block">
                   <a href="SECOND AUTHOR PERSONAL LINK" target="_blank"
                     >Dong Han</a
-                  ><sup>*</sup>,</span
-                >
+                  ><sup>2</sup>,</span
+                  >
                 <span class="author-block">
                   <a href="THIRD AUTHOR PERSONAL LINK" target="_blank"
                     >Wenzhe Wang</a
+                  ><sup>3†</sup>,</span
                   >
                 </span>
                 <span class="author-block">
                   <a href="THIRD AUTHOR PERSONAL LINK" target="_blank"
                     >Danny Chen</a
-                  >
+                  ><sup>4</sup>
                 </span>
               </div>
 
               <div class="is-size-5 publication-authors">
                 <span class="author-block"
-                  >Institution Name<br />Conferance name and year</span
-                >
-                <span class="eql-cntrb"
-                  ><small
-                    ><br /><sup>*</sup>Indicates Equal Contribution</small
-                  ></span
-                >
+                  ><sup>1</sup>Shanghai JiaoTong University,
+                  <sup>2</sup>Harbin Engineering University,
+                  <br/><sup>3</sup>Zhejiang University,
+                  <sup>4</sup>University of Notre Dame
+                  <br/>ECAI 2024</span>
+                <span class="eql-cntrb"><small><br><sup>†</sup>Corresponding Author</small></span>
               </div>
+              
 
               <div class="column has-text-centered">
                 <div class="publication-links">
                   <!-- Arxiv PDF link -->
-                  <span class="link-block">
+                  <!-- <span class="link-block">
                     <a
                       href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf"
                       target="_blank"
@@ -113,9 +140,9 @@
                       </span>
                       <span>Paper</span>
                     </a>
-                  </span>
+                  </span> -->
 
-                  <!-- Supplementary PDF link -->
+                  <!-- Supplementary PDF link
                   <span class="link-block">
                     <a
                       href="static/pdfs/supplementary_material.pdf"
@@ -127,7 +154,7 @@
                       </span>
                       <span>Supplementary</span>
                     </a>
-                  </span>
+                  </span> -->
 
                   <!-- Github link -->
                   <span class="link-block">
@@ -144,7 +171,7 @@
                   </span>
 
                   <!-- ArXiv abstract Link -->
-                  <span class="link-block">
+                  <!-- <span class="link-block">
                     <a
                       href="https://arxiv.org/abs/<ARXIV PAPER ID>"
                       target="_blank"
@@ -155,7 +182,7 @@
                       </span>
                       <span>arXiv</span>
                     </a>
-                  </span>
+                  </span> -->
                 </div>
               </div>
             </div>
@@ -168,16 +195,15 @@
     <section class="hero teaser">
       <div class="container is-max-desktop">
         <div class="hero-body">
-          <video poster="" id="tree" autoplay controls muted loop height="100%">
-            <!-- Your video here -->
+          <div class="item">
+            <img src="static\images\teaser_pic.png">
+          <!-- <video poster="" id="tree" autoplay controls muted loop height="100%">
             <source src="static/videos/banner_video.mp4" type="video/mp4" />
-          </video>
-          <h2 class="subtitle has-text-centered">
-            Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus
-            tellus, maximus vel lectus at, placerat pretium mi. Maecenas
-            dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut
-            maximus.
+          </video> -->
+          <h2 style="font-size: 18px" class="subtitle has-text-centered">
+            The overall architecture of our proposed SinLane network. The backbone first extracts multi-scale features from the input image. PFI is then applied to fully integrate global semantic information and local finer-scale features. Subsequently, Siamese Visual Transformer (Encoder and Decoder) generates lane sequences. Specifically, <span> \( e_0 \) </span> is the initial lane sequence, and <span> \( e_1 \) </span>, <span> \( e_2 \) </span>, and <span> \( e_3 \) </span> denote refined lane sequences optimized by different scales of feature maps from PFI.
           </h2>
+          </div>
         </div>
       </div>
     </section>
@@ -191,15 +217,7 @@
             <h2 class="title is-3">Abstract</h2>
             <div class="content has-text-justified">
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
-                ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna
-                feugiat nibh elementum, et tempor dolor mattis. Donec accumsan
-                enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex
-                eget mauris cursus euismod nec et nibh. Maecenas ac gravida
-                ante, nec cursus dui. Vivamus purus nibh, placerat ac purus
-                eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus
-                gravida commodo. Pellentesque auctor leo vitae sagittis
-                suscipit.
+                Lane detection is an important yet challenging task in autonomous driving systems. Based on the development of the Visual Transformer, early Transformer-based lane detection studies have achieved promising results in some scenarios. However, for complex road conditions such as uneven illumination intensity and heavy traffic, the performance of these methods remains limited and may even be worse than that of contemporaneous CNN-based methods. In this paper, we propose a novel Transformer-based end-to-end network, called SinLane, that attains the attention weights focusing on the sparse yet meaningful locations and improves the accuracy of lane detection in complex environments. SinLane is composed of a novel Siamese Visual Transformer structure and a novel Feature Pyramid Network (FPN) structure called Pyramid Feature Integration (PFI). We utilize the proposed PFI to better integrate global semantics and finer-scale features and to promote the optimization of the Transformer. Moreover, the designed Siamese Visual Transformer is combined with multiple levels of the PFI and is employed to refine the multi-scale lane line features output from the PFI. Extensive experiments on three benchmark datasets of lane detection demonstrate that our SinLane achieves state-of-the-art results with high accuracy and efficiency. Specifically, our SinLane improves the accuracy by over 3% compared to the current best-performing Transformer-based method for lane detection on CULane. Our code will be released.
               </p>
             </div>
           </div>
@@ -213,33 +231,18 @@
       <div class="hero-body">
         <div class="container">
           <div id="results-carousel" class="carousel results-carousel">
-            <div class="item">
-              <!-- Your image here -->
-              <img src="static/images/carousel1.jpg" alt="MY ALT TEXT" />
+            <div class="item" style="text-align: center;">
+              <img src="static/images/siamese.png" alt="MY ALT TEXT" style="max-width: 65%;" />
               <h2 class="subtitle has-text-centered">
-                First image description.
+                The main structure of the Siamese Visual Transformer.
               </h2>
             </div>
-            <div class="item">
-              <!-- Your image here -->
-              <img src="static/images/carousel2.jpg" alt="MY ALT TEXT" />
+            <div class="item" style="text-align: center;">
+              <img src="static/images/PFI.png" alt="MY ALT TEXT" style="max-width: 75%;" />
               <h2 class="subtitle has-text-centered">
-                Second image description.
+                The architecture of our proposed PFI. The inputs of PFI are different scales of feature maps generated by the backbone.
               </h2>
             </div>
-            <div class="item">
-              <!-- Your image here -->
-              <img src="static/images/carousel3.jpg" alt="MY ALT TEXT" />
-              <h2 class="subtitle has-text-centered">
-                Third image description.
-              </h2>
-            </div>
-            <div class="item">
-              <!-- Your image here -->
-              <img src="static/images/carousel4.jpg" alt="MY ALT TEXT" />
-              <h2 class="subtitle has-text-centered">
-                Fourth image description.
-              </h2>
             </div>
           </div>
         </div>
@@ -348,7 +351,7 @@
     </section>
     <!--End BibTex citation -->
 
-    <footer class="footer">
+    <!-- <footer class="footer">
       <div class="container">
         <div class="columns is-centered">
           <div class="column is-8">
@@ -379,7 +382,7 @@
           </div>
         </div>
       </div>
-    </footer>
+    </footer> -->
 
     <!-- Statcounter tracking code -->
 
