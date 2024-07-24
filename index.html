@@ -2,28 +2,28 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
-    <title>Centered Carousel</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SinLane</title>
     <style>
       .hero {
-          display: flex;
-          justify-content: center;
-          align-items: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
       .carousel .item {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
       }
       .carousel .item img {
-          display: block;
-          margin: 0 auto;
+        display: block;
+        margin: 0 auto;
       }
       .carousel .item h2 {
-          margin-top: 10px;
+        margin-top: 10px;
       }
-  </style>
+    </style>
 
     <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
     <!-- Replace the content tag with appropriate information -->
@@ -55,7 +55,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Academic Project Page</title>
-    <link rel="icon" type="image/x-icon" href="static/images/favicon.ico" />
+    <!-- <link rel="icon" type="image/x-icon" href="static/images/favicon.ico" /> -->
+    <link
+      rel="icon"
+      type="image/png"
+      href="static/images/heu.png"
+      sizes="128x128"
+    />
     <link
       href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
       rel="stylesheet"
@@ -79,7 +85,11 @@
     <script src="static/js/index.js"></script>
 
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
   </head>
   <body>
     <section class="hero">
@@ -88,7 +98,8 @@
           <div class="columns is-centered">
             <div class="column has-text-centered">
               <h1 class="title is-1 publication-title">
-                SinLane: Siamese Visual Transformer following Pyramid Feature Integration for Lane Detection
+                SinLane: Siamese Visual Transformer following Pyramid Feature
+                Integration for Lane Detection
               </h1>
               <div class="is-size-5 publication-authors">
                 <!-- Paper authors -->
@@ -101,13 +112,12 @@
                   <a href="SECOND AUTHOR PERSONAL LINK" target="_blank"
                     >Dong Han</a
                   ><sup>1</sup>,</span
-                  >
+                >
                 <span class="author-block">
                   <a href="THIRD AUTHOR PERSONAL LINK" target="_blank"
                     >Wenzhe Wang</a
                   ><sup>2†</sup>,</span
-                  >
-                </span>
+                >
                 <span class="author-block">
                   <a href="THIRD AUTHOR PERSONAL LINK" target="_blank"
                     >Danny Chen</a
@@ -118,12 +128,13 @@
               <div class="is-size-5 publication-authors">
                 <span class="author-block"
                   ><sup>1</sup>Harbin Engineering University,
-                  <sup>2</sup>Zhejiang University,
-                  <br/><sup>3</sup>University of Notre Dame
-                  <br/>ECAI 2024</span>
-                <span class="eql-cntrb"><small><br><sup>†</sup>Corresponding Author</small></span>
+                  <sup>2</sup>Zhejiang University, <br /><sup>3</sup>University
+                  of Notre Dame <br />ECAI 2024</span
+                >
+                <span class="eql-cntrb"
+                  ><small><br /><sup>†</sup>Corresponding Author</small></span
+                >
               </div>
-              
 
               <div class="column has-text-centered">
                 <div class="publication-links">
@@ -195,13 +206,25 @@
       <div class="container is-max-desktop">
         <div class="hero-body">
           <div class="item">
-            <img src="static\images\teaser_pic.png">
-          <!-- <video poster="" id="tree" autoplay controls muted loop height="100%">
+            <img
+              src="static\images\teaser_pic.png"
+              alt="MY ALT TEXT"
+              style="max-width: 100%"
+            />
+            <!-- <video poster="" id="tree" autoplay controls muted loop height="100%">
             <source src="static/videos/banner_video.mp4" type="video/mp4" />
           </video> -->
-          <h2 style="font-size: 18px" class="subtitle has-text-centered">
-            The overall architecture of our proposed SinLane network. The backbone first extracts multi-scale features from the input image. PFI is then applied to fully integrate global semantic information and local finer-scale features. Subsequently, Siamese Visual Transformer (Encoder and Decoder) generates lane sequences. Specifically, <span> \( e_0 \) </span> is the initial lane sequence, and <span> \( e_1 \) </span>, <span> \( e_2 \) </span>, and <span> \( e_3 \) </span> denote refined lane sequences optimized by different scales of feature maps from PFI.
-          </h2>
+            <h2 style="font-size: 18px" class="subtitle has-text-centered">
+              <b>Overall architecture</b> of our proposed SinLane network. The
+              backbone first extracts multi-scale features from the input image.
+              PFI is then applied to fully integrate global semantic information
+              and local finer-scale features. Subsequently, Siamese Visual
+              Transformer (Encoder and Decoder) generates lane sequences.
+              Specifically, <span> \( e_0 \) </span> is the initial lane
+              sequence, and <span> \( e_1 \) </span>, <span> \( e_2 \) </span>,
+              and <span> \( e_3 \) </span> denote refined lane sequences
+              optimized by different scales of feature maps from PFI.
+            </h2>
           </div>
         </div>
       </div>
@@ -216,7 +239,31 @@
             <h2 class="title is-3">Abstract</h2>
             <div class="content has-text-justified">
               <p>
-                Lane detection is an important yet challenging task in autonomous driving systems. Based on the development of the Visual Transformer, early Transformer-based lane detection studies have achieved promising results in some scenarios. However, for complex road conditions such as uneven illumination intensity and heavy traffic, the performance of these methods remains limited and may even be worse than that of contemporaneous CNN-based methods. In this paper, we propose a novel Transformer-based end-to-end network, called SinLane, that attains the attention weights focusing on the sparse yet meaningful locations and improves the accuracy of lane detection in complex environments. SinLane is composed of a novel Siamese Visual Transformer structure and a novel Feature Pyramid Network (FPN) structure called Pyramid Feature Integration (PFI). We utilize the proposed PFI to better integrate global semantics and finer-scale features and to promote the optimization of the Transformer. Moreover, the designed Siamese Visual Transformer is combined with multiple levels of the PFI and is employed to refine the multi-scale lane line features output from the PFI. Extensive experiments on three benchmark datasets of lane detection demonstrate that our SinLane achieves state-of-the-art results with high accuracy and efficiency. Specifically, our SinLane improves the accuracy by over 3% compared to the current best-performing Transformer-based method for lane detection on CULane. Our code will be released.
+                Lane detection is an important yet challenging task in
+                autonomous driving systems. Based on the development of the
+                Visual Transformer, early Transformer-based lane detection
+                studies have achieved promising results in some scenarios.
+                However, for complex road conditions such as uneven illumination
+                intensity and heavy traffic, the performance of these methods
+                remains limited and may even be worse than that of
+                contemporaneous CNN-based methods. In this paper, we propose a
+                novel Transformer-based end-to-end network, called SinLane, that
+                attains the attention weights focusing on the sparse yet
+                meaningful locations and improves the accuracy of lane detection
+                in complex environments. SinLane is composed of a novel Siamese
+                Visual Transformer structure and a novel Feature Pyramid Network
+                (FPN) structure called Pyramid Feature Integration (PFI). We
+                utilize the proposed PFI to better integrate global semantics
+                and finer-scale features and to promote the optimization of the
+                Transformer. Moreover, the designed Siamese Visual Transformer
+                is combined with multiple levels of the PFI and is employed to
+                refine the multi-scale lane line features output from the PFI.
+                Extensive experiments on three benchmark datasets of lane
+                detection demonstrate that our SinLane achieves state-of-the-art
+                results with high accuracy and efficiency. Specifically, our
+                SinLane improves the accuracy by over <b>3%</b> compared to the
+                current best-performing Transformer-based method for lane
+                detection on CULane. Our code has be released.
               </p>
             </div>
           </div>
@@ -228,49 +275,34 @@
     <!-- Image carousel -->
     <section class="hero is-small">
       <div class="hero-body">
-          <div class="container">
-              <div id="results-carousel" class="carousel results-carousel">
-                  <div class="item" style="text-align: center;">
-                      <img src="static/images/siamese.png" alt="MY ALT TEXT" style="max-width: 55%;" />
-                      <h2 class="subtitle has-text-centered">
-                          The main structure of the Siamese Visual Transformer.
-                      </h2>
-                  </div>
-                  <div class="item" style="text-align: center;">
-                      <img src="static/images/PFI.png" alt="MY ALT TEXT" style="max-width: 65%;" />
-                      <h2 class="subtitle has-text-centered">
-                          The architecture of our proposed PFI. The inputs of PFI are different scales of feature maps generated by the backbone.
-                      </h2>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </section>
-    <!-- End image carousel -->
-
-    <!-- Cu video -->
-    <section class="hero is-small is-light">
-      <div class="hero-body">
         <div class="container">
-          <!-- Paper video. -->
-          <h2 class="title is-3">Video Results on CULane & Tusimple & LLAMAS dataset (TODO)</h2>
-          <div class="columns is-centered has-text-centered">
-            <div class="column is-four-fifths">
-              <div class="publication-video">
-                <!-- Youtube embed code here -->
-                <iframe
-                  src="https://www.youtube.com/embed/JkaxUblCGz0"
-                  frameborder="0"
-                  allow="autoplay; encrypted-media"
-                  allowfullscreen
-                ></iframe>
-              </div>
+          <div id="results-carousel" class="carousel results-carousel">
+            <div class="item" style="text-align: center">
+              <img
+                src="static/images/siamese.png"
+                alt="MY ALT TEXT"
+                style="max-width: 55%"
+              />
+              <h2 class="subtitle has-text-centered">
+                The main structure of the Siamese Visual Transformer.
+              </h2>
+            </div>
+            <div class="item" style="text-align: center">
+              <img
+                src="static/images/PFI.png"
+                alt="MY ALT TEXT"
+                style="max-width: 80%"
+              />
+              <h2 class="subtitle has-text-centered">
+                The architecture of our proposed PFI. The inputs of PFI are
+                different scales of feature maps generated by the backbone.
+              </h2>
             </div>
           </div>
         </div>
       </div>
     </section>
-    <!-- End youtube video -->
+    <!-- End image carousel -->
 
     <!-- Video carousel -->
     <!-- <section class="hero is-small">
@@ -329,15 +361,23 @@
       <div class="hero-body">
         <div class="container">
           <!-- Paper video. -->
-          <h2 class="title is-3">Attention Maps</h2>
+          <h2 class="title">Attention Maps</h2>
           <div class="columns is-centered has-text-centered">
             <div class="column is-four-fifths">
-              
               <div class="item">
                 <!-- Your image here -->
-                <img src="static\images\attention_map.png" alt="MY ALT TEXT" style="max-width: 75%;">
+                <img
+                  src="static\images\attention_map.png"
+                  alt="MY ALT TEXT"
+                  style="max-width: 65%"
+                />
                 <h2 class="subtitle has-text-centered">
-                  Attention map examples of LSTR and our proposed SinLane. The two models are both trained with the same number of epochs. The attention weights of LSTR concentrate on the middle area of the lane lines. On the contrary, the attention weights of our method are evenly distributed from top to bottom on each line on the road.
+                  Attention map examples of LSTR and our proposed SinLane. The
+                  two models are both trained with the same number of epochs.
+                  The attention weights of LSTR concentrate on the middle area
+                  of the lane lines. On the contrary, the attention weights of
+                  our method are evenly distributed from top to bottom on each
+                  line on the road.
                 </h2>
               </div>
             </div>
@@ -346,6 +386,113 @@
       </div>
     </section>
 
+    <!-- Quality results -->
+    <section class="hero is-small">
+      <div class="hero-body">
+        <div class="container">
+          <h2 class="title">Quality Results</h2>
+          <div class="columns is-centered has-text-centered">
+            <div class="column is-four-fifths">
+              <div class="item">
+                <!-- Your image here -->
+                <img
+                  src="static\images\visualization.png"
+                  alt="MY ALT TEXT"
+                  style="max-width: 100%"
+                />
+                <h2 class="subtitle has-text-centered">
+                  Visualization results of ground truth (GT), LSTR, CLRNet, and
+                  our SinLane method on the benchmark dataset CULane. The
+                  results are generated using the same backbone ResNet18.
+                </h2>
+                <!-- <img
+                  src="static\images\hard_cases.png"
+                  alt="MY ALT TEXT"
+                  style="max-width: 100%"
+                />
+                <h2 class="subtitle has-text-centered">
+                  Failure cases of LSTR, CLRNet, and our proposed method SinLane
+                  on CULane. The results are generated with the same backbone
+                  ResNet18.
+                </h2> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--End Quality results -->
+
+    <!-- Results -->
+    <section class="hero is-small">
+      <div class="hero-body">
+        <div class="container">
+          <h2 class="title">Quantitative Results</h2>
+          <div class="columns is-centered has-text-centered">
+            <div class="column is-four-fifths">
+              <div class="item">
+                <!-- Your image here -->
+                <img
+                  src="static\images\result_tab_culane.png"
+                  alt="MY ALT TEXT"
+                  style="max-width: 100%"
+                />
+                <h2 class="subtitle has-text-centered">
+                  Comparison results of recent methods and our method on the
+                  CULane dataset. In order to compare the computation speeds in
+                  the same environment, we remeasure FPS on the same machine
+                  with an RTX3090 GPU using open-source code (if code is
+                  available).
+                </h2>
+                <img
+                  src="static\images\result_tab_tusimple.png"
+                  alt="MY ALT TEXT"
+                  style="max-width: 50%"
+                />
+                <h2 class="subtitle has-text-centered">
+                  Comparison results on the Tusimple dataset.
+                </h2>
+                <img
+                  src="static\images\result_tab_llamas.png"
+                  alt="MY ALT TEXT"
+                  style="max-width: 50%"
+                />
+                <h2 class="subtitle has-text-centered">
+                  Comparison results on the LLAMAS dataset.
+                </h2>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--End Results -->
+
+    <!-- Cu video -->
+    <section class="hero is-small is-light">
+      <div class="hero-body">
+        <div class="container">
+          <!-- Paper video. -->
+          <h2 class="title is-3">
+            Video Results on CULane & Tusimple & LLAMAS dataset (TODO)
+          </h2>
+          <div class="columns is-centered has-text-centered">
+            <div class="column is-four-fifths">
+              <div class="publication-video">
+                <!-- Youtube embed code here -->
+                <iframe
+                  src="https://www.youtube.com/embed/JkaxUblCGz0"
+                  frameborder="0"
+                  allow="autoplay; encrypted-media"
+                  allowfullscreen
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End youtube video -->
 
     <!-- Paper poster -->
     <section class="hero is-small is-light">
@@ -353,12 +500,28 @@
         <div class="container">
           <h2 class="title">Poster (TODO)</h2>
 
-          <iframe src="static/pdfs/sample.pdf" width="100%" height="550">
-          </iframe>
+          <!-- <iframe src="static/pdfs/sample.pdf" width="100%" height="550">
+          </iframe> -->
         </div>
       </div>
     </section>
     <!--End paper poster -->
+
+    <!-- Supplement material -->
+    <section class="hero is-small is-light">
+      <div class="hero-body">
+        <div class="container">
+          <h2 class="title">Supplement Material</h2>
+          <iframe
+            src="static\pdfs\Sup_ECAI_24__SinLane__Siamese_Visual_Transformer_following_Pyramid_Feature_Integration_for_Lane_Detection.pdf"
+            width="100%"
+            height="550"
+          >
+          </iframe>
+        </div>
+      </div>
+    </section>
+    <!--End Supplement material -->
 
     <!--BibTex citation -->
     <!-- <section class="section" id="BibTeX">
